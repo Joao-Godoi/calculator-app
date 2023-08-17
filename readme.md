@@ -44,4 +44,4 @@ git clone https://github.com/Joao-Godoi/calculator-app.git
 
 ## No seu dispositivo
 
-Basta baixar [este APK](app/build/outputs/apk/release/Calculadora.apk), permitir a instalação de fontes desconhecidas no seu dispositivo e finalizar a instalação.
+Basta baixar [este APK](/docs/Calculator.apk), permitir a instalação de fontes desconhecidas no seu dispositivo e finalizar a instalação.

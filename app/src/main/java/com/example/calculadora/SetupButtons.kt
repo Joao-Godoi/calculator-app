@@ -1,6 +1,7 @@
 package com.example.calculadora
 
 import android.widget.TextView
+import android.widget.Toast
 import net.objecthunter.exp4j.ExpressionBuilder
 
 fun MainActivity.setupNumberButtons() {
@@ -49,15 +50,20 @@ fun MainActivity.setupClearButton() {
 
 fun MainActivity.setupEqualsButton() {
     findViewById<TextView>(R.id.equalsOperator).setOnClickListener {
-        val text = expression.text.toString()
-        val expression = ExpressionBuilder(text).build()
+        try {
+            val text = expression.text.toString()
+            val expression = ExpressionBuilder(text).build()
 
-        val result = expression.evaluate()
-        val longResult = result.toLong()
-        this.result.text = if (result == longResult.toDouble()) {
-            longResult.toString()
-        } else {
-            result.toString()
+            val result = expression.evaluate()
+            val longResult = result.toLong()
+            this.result.text = if (result == longResult.toDouble()) {
+                longResult.toString()
+            } else {
+                result.toString()
+            }
+        } catch (e: IllegalArgumentException) {
+            Toast.makeText(this, "Insira uma expressao valida!", Toast.LENGTH_LONG).show()
+            this.expression.text = ""
         }
     }
 }

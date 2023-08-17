@@ -46,9 +46,9 @@
                 android:text="CLEAR" />
 
             <TextView
-                android:id="@+id/divideOperator"
+                android:id="@+id/delButton"
                 style="@style/ActionButtonStyle"
-                android:text="/" />
+                android:text="DEL" />
         </LinearLayout>
 
         <LinearLayout
@@ -149,14 +149,14 @@
                 android:text="0" />
 
             <TextView
-                android:id="@+id/delButton"
-                style="@style/NumberButtonStyle"
-                android:text="DEL" />
-
-            <TextView
                 android:id="@+id/equalsOperator"
                 style="@style/EqualButtonStyle"
                 android:text="=" />
+
+            <TextView
+                android:id="@+id/divideOperator"
+                style="@style/NumberActionButton2"
+                android:text="/" />
         </LinearLayout>
     </LinearLayout>
 </LinearLayout>
